@@ -1,0 +1,18 @@
+<div class="bg">
+<h1 style="text-align: center;">UNIVERSITY ADMISSION MANAGEMENT SYSTEM</h1>
+<p style="text-align:center;">
+  <a routerLink="/courses" class="navbar">View Courses</a>
+  <a routerLink="/status" class="navbar">Check Status</a>
+  <a routerLink="/auth" class="navbar">MAC Login</a>
+  <a routerLink="/login" class="navbar">Admin Login</a>
+  <router-outlet></router-outlet>
+</p>
+<div *ngIf="errBlock" [ngStyle]="{'color':'red','font-weight':'bold'}" >
+    <br>
+    {{errorText}}
+</div>
+<br><br><input type="text" placeholder="Application ID" name="applicationId" [(ngModel)]="applicationId" class="inputField">
+<button class="actionButton" (click)="checkStatus()">Check</button><br><br>
+<div id="dateOfInterview">{{dateOfInterview}}</div><br>
+<div id="statusResult">{{statusResult}}</div>
+</div>

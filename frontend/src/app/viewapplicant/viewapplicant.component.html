@@ -1,0 +1,67 @@
+<body>
+  <div class="bg-img">
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark" id="nav">
+    <div class="navbar-header">
+      <a class="navbar-brand" routerLink="../">Welcome {{service.userName}}</a>
+    </div>
+
+    <ul class="navbar-nav">
+      <li class="nav-item"><a class="nav-link" routerLink="/viewa">View Applicant</a></li>
+      <li class="nav-item"><a class="nav-link" routerLink="/viewc">View Course</a></li>
+      <li class="nav-item"><a class="nav-link" routerLink="/views">View Schedule</a></li>
+      <li class="nav-item"><a class="nav-link" routerLink="/addc">Add Course</a></li>
+      <li class="nav-item"><a class="nav-link" routerLink="/adds">Add Schedule</a></li>
+    </ul>
+
+    <ul class="navbar-nav ml-auto" style="float: right;">
+      <li class="nav-item"><a class="nav-link" routerLink="/create"><i class="fa fa-user-plus fa-2x" aria-hidden="true">MAC</i></a></li>
+      <li class="nav-item"><button class="btn" (click)="logout()"><i class="fa fa-sign-out">Sign Out</i></button></li>
+    </ul>
+
+  </nav>
+
+  <div class="container" id="container">
+    <h2 class="mat-display-2">Search Applicant</h2>
+    <mat-form-field class="filter">
+      <mat-label>Select Program Name</mat-label>
+      <mat-select [formControl]="searchFilter" placeholder="Select a Program">
+        <mat-option *ngFor="let program of course " [value]="program" (click)="applySearchFilter()">
+          {{program.programName}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+
+  <div class="container" *ngIf="showTable">
+    <h1 style="text-align: center;color: blue;margin-top: 45px;">List of Applicants</h1>
+    <table class="table table-dark" id="applicant">
+      <tr>
+        <td>ID</td>
+        <td>Full Name</td>
+        <td>Date Of Birth</td>
+        <td>Highest Qualification</td>
+        <td>Marks Obtained</td>
+        <td>Goals</td>
+        <td>Email Id</td>
+        <td>Schedule Program Id</td>
+        <td>Status</td>
+        <td>Date Of Interview</td>
+      </tr>
+      <tr *ngFor="let a of applicants">
+        <td>{{a.applicantId}}</td>
+        <td>{{a.fullName}}</td>
+        <td>{{a.dateOfBirth}}</td>
+        <td>{{a.highestQualification}}</td>
+        <td>{{a.marksObtained}}</td>
+        <td>{{a.goals}}</td>
+        <td>{{a.emailId}}</td>
+        <td>{{a.scheduledProgramId}}</td>
+        <td>{{a.status}}</td>
+        <td>{{a.dateOfInterview}}</td>
+      </tr>
+    </table>
+  </div>
+
+  <div id="abc" *ngIf="showMsg" class="success">
+    <span>{{message}}</span>
+  </div>
+  </div>

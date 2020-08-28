@@ -1,0 +1,17 @@
+.bg{
+    font-family:'Montserrat', sans-serif;
+    background-color:#f0ad4e;
+}
+.navbar{
+    background: #000;
+    border-color: transparent;
+    color: #fff;
+    cursor: pointer;
+    padding:10px 25px;
+    text-decoration: none;
+}
+
+.navbar:hover{
+    background-color:#5bc0de;
+    text-decoration: none;
+}

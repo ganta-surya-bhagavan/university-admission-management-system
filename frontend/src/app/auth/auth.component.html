@@ -1,0 +1,11 @@
+<div class="bg">
+<h1 style="text-align:center">MAC Login</h1>
+<div class="login">
+    <div id="loginError" class="errorMainColor"></div>
+    <form class="login-container" (ngSubmit)="signIn()">
+      <p><input type="text" name="userEmail" placeholder="Username" [(ngModel)]="userEmail" required></p>
+      <p><input type="password" name="userPassword" placeholder="Password" [(ngModel)]="userPassword" required></p>
+      <p><button type="submit" class="actionButton" id="loginButton">{{buttonLabel}}</button></p>
+    </form>
+</div>
+</div>

@@ -1,0 +1,23 @@
+<table  class="outputTable">
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Location</th>
+        <th>Start Date</th>
+        <th>End Date</th>
+        <th>sessions Per Week</th>
+    </tr>
+    <ng-container *ngFor="let schedule of schedules;">
+        <tr *ngIf="(schedule.scheduledProgramId == targetId)">
+            <td>{{schedule.scheduledProgramId}}</td>
+            <td>{{schedule.programName}}</td>
+            <td>{{schedule.location}}</td>
+            <td>{{schedule.startDate}}</td>
+            <td>{{schedule.endDate}}</td>
+            <td>{{schedule.sessionsPerWeek}}</td>
+        </tr>
+    </ng-container>
+</table>
+<ng-template #showLoading>
+    <h2 class="loadingHeading">Loading <i class="fa fa-circle-o-notch fa-spin"></i></h2>
+</ng-template>

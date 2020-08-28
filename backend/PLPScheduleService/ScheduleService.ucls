@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class-diagram version="1.2.4" icons="true" always-add-relationships="false" generalizations="true" realizations="true" 
+  associations="true" dependencies="true" nesting-relationships="true" router="FAN">  
+  <class id="1" language="java" name="com.cg.UniversityAdmissionSystem.Controller.ScheduleController" 
+    project="PLPScheduleService" 
+    file="/PLPScheduleService/src/main/java/com/cg/UniversityAdmissionSystem/Controller/ScheduleController.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="214" width="263" x="425" y="5"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="2" language="java" name="com.cg.UniversityAdmissionSystem.Controller.ExceptionController" 
+    project="PLPScheduleService" 
+    file="/PLPScheduleService/src/main/java/com/cg/UniversityAdmissionSystem/Controller/ExceptionController.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="124" width="354" x="29" y="243"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="3" language="java" name="com.cg.UniversityAdmissionSystem.Service.ScheduleService" 
+    project="PLPScheduleService" 
+    file="/PLPScheduleService/src/main/java/com/cg/UniversityAdmissionSystem/Service/ScheduleService.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="160" width="261" x="457" y="262"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="4" language="java" name="com.cg.UniversityAdmissionSystem.Service.ScheduleServiceImpl" 
+    project="PLPScheduleService" 
+    file="/PLPScheduleService/src/main/java/com/cg/UniversityAdmissionSystem/Service/ScheduleServiceImpl.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="214" width="261" x="496" y="482"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="5" language="java" name="com.cg.UniversityAdmissionSystem.Entity.Schedule" project="PLPScheduleService" 
+    file="/PLPScheduleService/src/main/java/com/cg/UniversityAdmissionSystem/Entity/Schedule.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="448" width="272" x="1005" y="-14"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="6" language="java" name="com.cg.UniversityAdmissionSystem.dao.ScheduleReppository" 
+    project="PLPScheduleService" 
+    file="/PLPScheduleService/src/main/java/com/cg/UniversityAdmissionSystem/dao/ScheduleReppository.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1062" y="603"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="7" language="java" name="com.cg.UniversityAdmissionSystem.Exception.DuplicateException" 
+    project="PLPScheduleService" 
+    file="/PLPScheduleService/src/main/java/com/cg/UniversityAdmissionSystem/Exception/DuplicateException.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="106" width="262" x="46" y="42"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="8" language="java" name="com.cg.UniversityAdmissionSystem.Exception.NotFoundException" 
+    project="PLPScheduleService" 
+    file="/PLPScheduleService/src/main/java/com/cg/UniversityAdmissionSystem/Exception/NotFoundException.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="88" width="262" x="142" y="512"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <dependency id="9">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="5"/>  
+  </dependency>  
+  <dependency id="10">    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="8"/>  
+  </dependency>  
+  <association id="11">    
+    <end type="SOURCE" refId="1" navigable="false">      
+      <attribute id="12" name="scheduleService"/>      
+      <multiplicity id="13" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="3" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="14">    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="7"/>  
+  </dependency>  
+  <dependency id="15">    
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="5"/>  
+  </dependency>  
+  <realization id="16">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="3"/>  
+  </realization>  
+  <dependency id="17">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="8"/>  
+  </dependency>  
+  <dependency id="18">    
+    <end type="SOURCE" refId="1"/>    
+    <end type="TARGET" refId="5"/>  
+  </dependency>  
+  <dependency id="19">    
+    <end type="SOURCE" refId="3"/>    
+    <end type="TARGET" refId="5"/>  
+  </dependency>  
+  <association id="20">    
+    <end type="SOURCE" refId="4" navigable="false">      
+      <attribute id="21" name="scheduleRepo"/>      
+      <multiplicity id="22" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="6" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+    sort-features="false" accessors="true" visibility="true">    
+    <attributes public="true" package="true" protected="true" private="true" static="true"/>    
+    <operations public="true" package="true" protected="true" private="true" static="true"/>  
+  </classifier-display>  
+  <association-display labels="true" multiplicity="true"/>
+</class-diagram>

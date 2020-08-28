@@ -1,0 +1,93 @@
+<div class="bg">
+<h1 style="text-align: center;">UNIVERSITY ADMISSION MANAGEMENT SYSTEM</h1>
+<p style="text-align:center;">
+  <a routerLink="/courses" class="navbar">View Courses</a>
+  <a routerLink="/status" class="navbar">Check Status</a>
+  <a routerLink="/auth" class="navbar">MAC Login</a>
+  <a routerLink="/login" class="navbar">Admin Login</a>
+  <router-outlet></router-outlet>
+</p>
+<div *ngIf="errBlock" [ngStyle]="{'color':'red','font-weight':'bold'}" >
+    <br>
+    {{errorText}}
+</div>
+<h2 style="text-align: center;">Apply for Course</h2>
+<table  class="outputTable">
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Eligibility</th>
+        <th>Duration (Years)</th>
+        <th>Certificate</th>
+    </tr>
+    <ng-container *ngFor="let course of courses;">
+        <tr *ngIf="(course.courseId == targetCourse)">
+            <td>{{course.courseId}}</td>
+            <td>{{course.programName}}</td>
+            <td>{{course.description}}</td>
+            <td>{{course.applicantEligibility}}</td>
+            <td>{{course.duration}}</td>
+            <td>{{course.degreeCertificateOffered}}</td>
+        </tr>
+    </ng-container>
+</table>
+<br><br>
+<form [formGroup]="applicantForm" (ngSubmit)="apply()">
+    <div class="applyForm" >
+        
+        <label>Full Name</label>
+        <input type="text" placeholder="name" name="applicantName"  class="inputField"  formControlName="fullName" ><br>
+        <div *ngIf="applicantForm.controls['fullName'].hasError('required')">
+            <span [ngStyle]="{'margin-left':'40px','color':'red'}">Name cant be blank</span>
+        </div>
+        <div *ngIf="applicantForm.controls['fullName'].hasError('pattern')">
+            <span [ngStyle]="{'margin-left':'40px','color':'red'}">Name starts with capital letter, only spaces are allowed</span>
+        </div>
+        <label>Date of Birth</label>
+        <input type="date" placeholder="dob" name="applicantDOB"  max="1998-01-01" formControlName="dateofBirth" class="inputField"><br>
+        <div *ngIf="applicantForm.controls['dateofBirth'].hasError('required')">
+            <span [ngStyle]="{'margin-left':'40px','color':'red'}">DOB cant be blank</span>
+        </div>
+        <label>Highest Qualification</label>
+        <select id="highestQualification" aria-placeholder="select one" class="inputField" formControlName="qualification">
+            <!--<option value="HSC" >SSC</option>
+            <option value="BTech">HSC</option>
+            <option value="MTech">Graduation</option>
+            <option value="Phd">Post Graduation</option>-->
+            <option [value]="select" *ngFor="let select of qualification">{{select}}</option>
+          </select><br>
+          <div *ngIf="applicantForm.controls['qualification'].hasError('required')">
+            <span [ngStyle]="{'margin-left':'40px','color':'red'}">qualification cant be blank</span>
+          </div>
+        <label>Marks (In %)</label>
+        <input type="number" placeholder="marks in %" min="40" step="1" max="100" name="marks"  class="inputField" formControlName="marksObtained" ><br>
+        <div *ngIf="applicantForm.controls['marksObtained'].hasError('required')">
+            <span [ngStyle]="{'margin-left':'40px','color':'red'}">marks cant be blank</span>
+          </div>
+        <div *ngIf="applicantForm.controls['marksObtained'].hasError('min')">
+            <span [ngStyle]="{'margin-left':'40px','color':'red'}">min % is 40</span>
+        </div>
+        <div *ngIf="applicantForm.controls['marksObtained'].hasError('max')">
+            <span [ngStyle]="{'margin-left':'40px','color':'red'}">max % is 100</span>
+        </div>
+        <label>Goals</label>
+        <input type="text" placeholder="goals" name="goals"  class="inputField" formControlName="goals" ><br>
+        <div *ngIf="applicantForm.controls['goals'].hasError('required')">
+            <span [ngStyle]="{'margin-left':'40px','color':'red'}">goals cant be blank</span>
+        </div>
+        <label>Email</label>
+        <input type="email" placeholder="email Id" name="email"  class="inputField" formControlName="emailId" ><br>
+        <div *ngIf="applicantForm.controls['emailId'].hasError('required')">
+            <span [ngStyle]="{'margin-left':'40px','color':'red'}">emailId cant be blank</span>
+        </div>
+        <div *ngIf="applicantForm.controls['emailId'].hasError('pattern')">
+            <span [ngStyle]="{'margin-left':'40px','color':'red'}">enter valid emailId</span>
+        </div>
+        <div class="error">{{errorMsg}}</div>
+        <div class="success">{{successMsg}}</div>
+        <br><button class="actionButton" type="submit">Apply</button>
+        
+    </div>
+    </form>
+    </div>

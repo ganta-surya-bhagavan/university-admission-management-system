@@ -1,0 +1,34 @@
+<div class="bg">
+<h1 style="text-align: center;">UNIVERSITY ADMISSION MANAGEMENT SYSTEM</h1>
+<p style="text-align:center;">
+  <a routerLink="/courses" class="navbar">View Courses</a>
+  <a routerLink="/status" class="navbar">Check Status</a>
+  <a routerLink="/auth" class="navbar">MAC Login</a>
+  <a routerLink="/login" class="navbar">Admin Login</a>
+  <router-outlet></router-outlet>
+</p>
+<div *ngIf="errBlock" [ngStyle]="{'color':'red','font-weight':'bold'}" >
+    <br>
+    {{errorText}}
+</div>
+<table  class="outputTable">
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Location</th>
+        <th>Start Date</th>
+        <th>End Date</th>
+        <th>sessions Per Week</th>
+    </tr>
+    <ng-container *ngFor="let detail of details;">
+        <tr *ngIf="(detail.scheduledProgramId == targetCourse)">
+            <td>{{detail.scheduledProgramId}}</td>
+            <td>{{detail.programName}}</td>
+            <td>{{detail.location}}</td>
+            <td>{{detail.startDate}}</td>
+            <td>{{detail.endDate}}</td>
+            <td>{{detail.sessionsPerWeek}}</td>
+        </tr>
+    </ng-container>
+</table>
+</div>

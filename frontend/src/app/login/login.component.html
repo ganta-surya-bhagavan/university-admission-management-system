@@ -1,0 +1,33 @@
+
+<div class="bg-img">
+<div class="form-container">
+    <form class="form-signin" [formGroup]="adminForm" (ngSubmit)="login()">
+
+        <h1 class="h3 mb-3 font-weight-normal">Admin Login</h1> <img class="mb-4"
+            src="https://img.icons8.com/bubbles/2x/admin-settings-male.png" alt="" width="120" height="120">
+        <label for="username" class="sr-only">User Name</label>
+        <input type="text" id="username" class="form-control" placeholder="User Name" required autofocus
+            formControlName="username">
+         <div class="text text-danger" *ngIf="adminForm.get('username').hasError('required')&&(adminForm.get('username').dirty||adminForm.get('username').touched)">
+             User name is <strong>required</strong>
+         </div>
+        <label for="inputPassword" class="sr-only">Password</label>
+        <input type="password" id="inputPassword" class="form-control" placeholder="Password" required
+            formControlName="password">
+            <mat-error *ngIf="adminForm.get('password').hasError('required')&&(adminForm.get('password').dirty||adminForm.get('password').touched)">
+             Password is <strong>required</strong>
+           </mat-error>
+        <label for="role" class="sr-only">Role</label>
+        <input type="text" id="role" class="form-control" placeholder="Role" required formControlName="role">
+        <mat-error *ngIf="adminForm.get('role').hasError('required')&&(adminForm.get('role').dirty||adminForm.get('role').touched)">
+            Role is <strong>required</strong>
+       </mat-error>
+        <div class="checkbox mb-3">
+            <label>
+                <input type="checkbox" value="remember-me"> Remember me
+            </label>
+        </div>
+        <button class="btn btn-lg btn-danger btn-block" type="submit">Sign in</button>
+    </form>
+</div>
+</div>

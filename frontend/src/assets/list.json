@@ -1,0 +1,147 @@
+{
+    "applicant":[
+        {
+            "id":1,
+            "fullName":"surya",
+            "dateOfBirth":"03-01-1999",
+            "highestQualification":"HSC",
+            "marksObtained":"90",
+            "goals":"get a good job",
+            "emailId":"surya@gmail.com",
+            "scheduledProgramId":"1",
+            "status":"waiting",
+            "dateOfInterview":"28-03-2020"
+        },
+        {
+            "id":2,
+            "fullName":"bhagavan",
+            "dateOfBirth":"03-01-1999",
+            "highestQualification":"SSC",
+            "marksObtained":"80",
+            "goals":"get a good job",
+            "emailId":"bhagavan@gmail.com",
+            "scheduledProgramId":"4",
+            "status":"waiting",
+            "dateOfInterview":"28-03-2020"
+        },
+        {
+            "id":3,
+            "fullName":"ganta",
+            "dateOfBirth":"03-01-1999",
+            "highestQualification":"Btech",
+            "marksObtained":"60",
+            "goals":"get a good job",
+            "emailId":"ganta@gmail.com",
+            "scheduledProgramId":"2",
+            "status":"waiting",
+            "dateOfInterview":"28-03-2020"
+        },
+        {
+            "id":4,
+            "fullName":"prerak",
+            "dateOfBirth":"03-01-1998",
+            "highestQualification":"Mtech",
+            "marksObtained":"100",
+            "goals":"become expert",
+            "emailId":"prerak@gmail.com",
+            "scheduledProgramId":"3",
+            "status":"waiting",
+            "dateOfInterview":"28-03-2020"
+        }
+    ],
+    "programsOffered":[
+        {
+            "id":1,
+            "programName":"Btech",
+            "description":"100% placements",
+            "applicantEligibility":"HSC",
+            "duration":4,
+            "degreeCertificateOffered":"Full time Btech"
+        },
+        {
+            "id":2,
+            "programName":"Mtech",
+            "description":"Become professional",
+            "applicantEligibility":"Btech",
+            "duration":2,
+            "degreeCertificateOffered":"Full time Mtech"
+        },
+        {
+            "id":3,
+            "programName":"Phd",
+            "description":"Become a doctorate",
+            "applicantEligibility":"Mtech",
+            "duration":5,
+            "degreeCertificateOffered":"Full time Phd"  
+        },
+        {
+            "id":4,
+            "programName":"Diploma",
+            "description":"First step to your professional career",
+            "applicantEligibility":"SSC",
+            "duration":3,
+            "degreeCertificateOffered":"Full time Diploma"
+        }
+    ],
+    "programsScheduled":[
+        {
+            "id":1,
+            "programName":"Btech",
+            "location":"Pune",
+            "startDate":"03-08-2020",
+            "endDate":"03-08-2024",
+            "sessionsPerWeek":21
+        },
+        {
+            "id":2,
+            "programName":"Mtech",
+            "location":"Mumbai",
+            "startDate":"03-08-2020",
+            "endDate":"03-08-2022",
+            "sessionsPerWeek":18
+        },
+        {
+            "id":3,
+            "programName":"Phd",
+            "location":"Delhi",
+            "startDate":"03-08-2020",
+            "endDate":"03-08-2025",
+            "sessionsPerWeek":10
+        },
+        {
+            "id":4,
+            "programName":"Diploma",
+            "location":"Visakhapatnam",
+            "startDate":"03-08-2020",
+            "endDate":"03-08-2023",
+            "sessionsPerWeek":30
+        }
+    ],
+    "users":[
+        {
+            "loginId":"surya",
+            "password":"surya",
+            "role":"admin"
+        },
+        {
+            "loginId":"ganta",
+            "password":"ganta",
+            "role":"mac"
+        },
+        {
+            "loginId":"prerak",
+            "password":"prerak",
+            "role":"admin"
+        },
+        {
+            "loginId":"sudhanshu",
+            "password":"sudhanshu",
+            "role":"mac"
+        },
+        {
+            "loginId":"agarwal",
+            "password":"agarawal",
+            "role":"mac"  
+        }
+    ]
+}

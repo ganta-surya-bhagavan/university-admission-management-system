@@ -1,0 +1,36 @@
+  .outputTable {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top:50px;
+  }
+  
+  .outputTable td, .outputTable th {
+    border: 1px solid #000;
+    padding: 15px 8px;
+  }
+ 
+  
+  .outputTable th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #000;
+    color: white;
+  }
+
+  .actionButton{
+    background: #000;
+    border-color: transparent;
+    color: #fff;
+    cursor: pointer;
+    padding:10px 10px;
+    text-decoration: none;
+}
+
+.actionButton:hover{
+    background-color:#5bc0de;
+    text-decoration: none;
+}
+.loadingHeading{
+  margin-top:5em;
+}

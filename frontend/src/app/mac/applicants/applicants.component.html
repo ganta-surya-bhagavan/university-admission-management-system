@@ -1,0 +1,43 @@
+<div class="bg">
+<table class="outputTable">
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Course ID</th>
+        <th>DOB</th>
+        <th>Qualification</th>
+        <th>Marks</th>
+        <th>Goals</th>
+        <th>Emails</th>
+        <th>Status</th>
+        <th>Interview on</th>
+    </tr>
+    <ng-container *ngFor="let applicant of applicants; let i=index">
+        <tr *ngIf="((targetCourse != 0 && applicant.scheduledProgramId == targetCourse) || targetCourse == 0)">
+            <td>{{applicant.applicantId}}</td>
+            <td>{{applicant.fullName}}</td>
+            <td>{{applicant.scheduledProgramId}}</td>
+            <td>{{applicant.dateOfBirth}}</td>
+            <td>{{applicant.highestQualification}}</td>
+            <td>{{applicant.marksObtained}}</td>
+            <td>{{applicant.goals}}</td>
+            <td>{{applicant.emailId}}</td>
+            <td>{{applicant.status}}<br><br>
+                <ng-container *ngIf="(applicant.status != 'waiting' && applicant.status != 'under process')">
+                    <button (click)="updateStatus('waiting',i,applicant.applicantId,applicant)" class="actionButton lightButton">On Hold</button>
+                </ng-container>
+                <ng-container *ngIf="applicant.status != 'rejected'">
+                    <button (click)="updateStatus('rejected',i,applicant.applicantId,applicant)" class="actionButton lighterButton">Rejected</button>
+                </ng-container>
+                <ng-container *ngIf="applicant.status != 'selected'">
+                    <button (click)="updateStatus('selected',i,applicant.applicantId,applicant)" class="actionButton">Selected</button>
+                </ng-container>
+            </td>
+            <td>{{applicant.dateOfInterview}}<input type="date" name="interviewDate" id="interviewDate_{{i}}" class="inputField" required><button (click)="scheduledInterview(i,applicant.applicantId,applicant)" id="interviewDateButton_{{i}}" class="actionButton">Schedule</button></td>
+        </tr>
+    </ng-container>
+</table>
+<ng-template #showLoading>
+    <h2 class="loadingHeading">Loading <i class="fa fa-circle-o-notch fa-spin"></i></h2>
+</ng-template>
+</div>

@@ -1,0 +1,66 @@
+<body>
+  <div class="bg-img">
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark" id="nav">
+      <div class="navbar-header">
+        <a class="navbar-brand" routerLink="../">Welcome {{service.userName}}</a>
+      </div>
+  
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" routerLink="/viewa">View Applicant</a></li>
+        <li class="nav-item"><a class="nav-link" routerLink="/viewc">View Course</a></li>
+        <li class="nav-item"><a class="nav-link" routerLink="/views">View Schedule</a></li>
+        <li class="nav-item"><a class="nav-link" routerLink="/addc">Add Course</a></li>
+        <li class="nav-item"><a class="nav-link" routerLink="/adds">Add Schedule</a></li>
+      </ul>
+  
+      <ul class="navbar-nav ml-auto" style="float: right;">
+        <li class="nav-item"><a class="nav-link" routerLink="/create"><i class="fa fa-user-plus fa-2x" aria-hidden="true">MAC</i></a></li>
+        <li class="nav-item"><button class="btn" (click)="logout()"><i class="fa fa-sign-out">Sign Out</i></button></li>
+      </ul>
+  
+    </nav>
+
+
+    <div class="container">
+        <h1 style="text-align: center;">Create New Mac</h1>
+        <form [formGroup]="userForm" (ngSubmit)="onSubmit()" id="myform">
+          <mat-form-field>
+            <mat-label>User Name</mat-label>
+            <input matInput [formControl]="userForm.controls['userName']" placeholder="username" minlength="5">
+            <mat-error *ngIf="userForm.controls['userName'].hasError('required')">
+              User name is <strong>required</strong>
+            </mat-error>
+            <mat-error *ngIf="userForm.controls['userName'].hasError('minlength')">
+              UserName must of <strong>5 characters</strong>
+            </mat-error>
+          </mat-form-field>
+          <mat-form-field>
+            <mat-label>Password</mat-label>
+            <input matInput [formControl]="userForm.controls['password']"
+              placeholder="Password">
+            <mat-error *ngIf="userForm.controls['password'].hasError('required')">
+              Password is <strong>required</strong>
+            </mat-error>
+            <mat-error *ngIf="userForm.controls['password'].hasError('minlength')">
+              Password must be of <strong>5 characters</strong>
+            </mat-error>
+          </mat-form-field>
+          <mat-form-field>
+            <mat-label>Role</mat-label>
+            <input matInput [formControl]="userForm.controls['role']"
+              placeholder="Role">
+            <mat-error *ngIf="userForm.controls['role'].hasError('required')">
+              Role is <strong>required</strong>
+            </mat-error>
+          </mat-form-field>
+          
+          <button type="submit" id="submit">Create New Mac</button>
+        </form>
+      </div>
+
+      <div id="abc" *ngIf="success" class="success">
+        <span>{{message}}</span>
+      </div>
+
+      </div>
+</body>

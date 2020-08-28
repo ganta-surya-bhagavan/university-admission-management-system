@@ -1,0 +1,52 @@
+.bg{
+    font-family:'Montserrat', sans-serif;
+    background-color:#0070ad;
+    color:#fff;
+}
+.navbar{
+    background: #000;
+    border-color: transparent;
+    color: #fff;
+    cursor: pointer;
+    padding:10px 25px;
+    text-decoration: none;
+  }
+  
+  .navbar:hover{
+    background-color:#95e616;
+    text-decoration: none;
+  }
+.inputField{
+    margin-top:15px;
+    box-sizing: border-box;
+    display: inline-block;
+    width:250px;
+    border-width: 1px;
+    border-style: solid;
+    padding: 10px;
+    outline: 0;
+    font-family: inherit;
+    font-size: 0.75em;
+    background: #fff;
+    border-color: #bbb;
+    color: #555;
+}
+
+.actionButton{
+    background: #000;
+    border-color: transparent;
+    color: #fff;
+    cursor: pointer;
+    padding:10px 25px;
+    text-decoration: none;
+}
+
+.actionButton:hover{
+    background-color:#5bc0de;
+    text-decoration: none;
+}
+
+#statusResult{
+    font-weight: bold;
+    font-size: 16px;
+}

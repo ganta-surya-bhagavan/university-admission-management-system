@@ -1,0 +1,11 @@
+<div class="bg">
+<div style="text-align:center">
+    <h1>Welcome {{service.userName}}!</h1>
+    <p>
+        <a routerLink="viewCourses" class="navbar">Courses</a>
+        <a routerLink="applicants" class="navbar">Applicants</a>
+        <a (click)="logout()" class="navbar">Logout</a>
+        <router-outlet></router-outlet>
+    </p>
+</div>
+</div>
